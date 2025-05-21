@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -4543,3 +4544,309 @@ export type YearStats = {
   meanScore?: Maybe<Scalars['Int']['output']>;
   year?: Maybe<Scalars['Int']['output']>;
 };
+
+export type PaginationFragment = {
+  __typename?: 'PageInfo';
+  total?: number | null;
+  currentPage?: number | null;
+  lastPage?: number | null;
+  hasNextPage?: boolean | null;
+  perPage?: number | null;
+} & { ' $fragmentName'?: 'PaginationFragment' };
+
+export type CardMediaFragment = {
+  __typename?: 'Media';
+  id: number;
+  averageScore?: number | null;
+  genres?: Array<string | null> | null;
+  format?: MediaFormat | null;
+  episodes?: number | null;
+  season?: MediaSeason | null;
+  seasonYear?: number | null;
+  title?: {
+    __typename?: 'MediaTitle';
+    userPreferred?: string | null;
+    english?: string | null;
+    romaji?: string | null;
+  } | null;
+  coverImage?: {
+    __typename?: 'MediaCoverImage';
+    large?: string | null;
+    medium?: string | null;
+    color?: string | null;
+  } | null;
+} & { ' $fragmentName'?: 'CardMediaFragment' };
+
+export type AnimeListQueryVariables = Exact<{
+  page?: InputMaybe<Scalars['Int']['input']>;
+  perPage?: InputMaybe<Scalars['Int']['input']>;
+  genre?: InputMaybe<Scalars['String']['input']>;
+  genres?: InputMaybe<
+    Array<InputMaybe<Scalars['String']['input']>> | InputMaybe<Scalars['String']['input']>
+  >;
+  sort?: InputMaybe<Array<InputMaybe<MediaSort>> | InputMaybe<MediaSort>>;
+}>;
+
+export type AnimeListQuery = {
+  __typename?: 'Query';
+  Page?: {
+    __typename?: 'Page';
+    pageInfo?:
+      | ({ __typename?: 'PageInfo' } & {
+          ' $fragmentRefs'?: { PaginationFragment: PaginationFragment };
+        })
+      | null;
+    media?: Array<
+      | ({ __typename?: 'Media'; id: number } & {
+          ' $fragmentRefs'?: { CardMediaFragment: CardMediaFragment };
+        })
+      | null
+    > | null;
+  } | null;
+};
+
+export const PaginationFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Pagination' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'total' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'currentPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'lastPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'hasNextPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'perPage' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PaginationFragment, unknown>;
+export const CardMediaFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'CardMedia' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'title' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'english' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'coverImage' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'format' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'season' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<CardMediaFragment, unknown>;
+export const AnimeListDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'AnimeList' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'page' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+          defaultValue: { kind: 'IntValue', value: '1' },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'perPage' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+          defaultValue: { kind: 'IntValue', value: '20' },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'genre' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'genres' } },
+          type: {
+            kind: 'ListType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+          },
+        },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'sort' } },
+          type: {
+            kind: 'ListType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'MediaSort' } },
+          },
+          defaultValue: {
+            kind: 'ListValue',
+            values: [{ kind: 'EnumValue', value: 'TRENDING_DESC' }],
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'Page' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'page' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'page' } },
+              },
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'perPage' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'perPage' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'pageInfo' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'Pagination' } },
+                    ],
+                  },
+                },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'media' },
+                  arguments: [
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'sort' },
+                      value: { kind: 'Variable', name: { kind: 'Name', value: 'sort' } },
+                    },
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'type' },
+                      value: { kind: 'EnumValue', value: 'ANIME' },
+                    },
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'isAdult' },
+                      value: { kind: 'BooleanValue', value: false },
+                    },
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'genre' },
+                      value: { kind: 'Variable', name: { kind: 'Name', value: 'genre' } },
+                    },
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'genre_in' },
+                      value: { kind: 'Variable', name: { kind: 'Name', value: 'genres' } },
+                    },
+                  ],
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Pagination' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'total' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'currentPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'lastPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'hasNextPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'perPage' } },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'CardMedia' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'title' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'english' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'coverImage' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'format' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'season' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AnimeListQuery, AnimeListQueryVariables>;

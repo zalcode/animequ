@@ -2,7 +2,7 @@ import { GraphQLClient } from 'graphql-request';
 
 const endpoint = 'https://graphql.anilist.co';
 
-export const request = new GraphQLClient(endpoint, {
+export const client = new GraphQLClient(endpoint, {
   mode: 'cors',
   method: 'POST',
   headers: {
@@ -11,4 +11,4 @@ export const request = new GraphQLClient(endpoint, {
   },
 });
 
-export default request;
+export default client;
