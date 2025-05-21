@@ -1,0 +1,1218 @@
+[
+  {
+    "id": 179706,
+    "title": {
+      "romaji": "Lycoris Recoil: Friends are thieves of time.",
+      "english": "Lycoris Recoil -Friends are thieves of time.-",
+      "native": "\u30ea\u30b3\u30ea\u30b9\u30fb\u30ea\u30b3\u30a4\u30eb Friends are thieves of time."
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx179706-NvVrmMxnDatB.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx179706-NvVrmMxnDatB.jpg",
+      "color": "#e45043"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/179706-mR1oEVbNT3yQ.jpg",
+    "description": "A series of shorts showing the daily lives of Chisato, Takina, and others employed in Cafe LycoReco. ",
+    "episodes": 6,
+    "genres": ["Slice of Life"],
+    "averageScore": 77,
+    "meanScore": 78,
+    "status": "FINISHED",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "ONA",
+    "studios": {
+      "nodes": [
+        {
+          "id": 17,
+          "name": "Aniplex"
+        },
+        {
+          "id": 561,
+          "name": "A-1 Pictures"
+        }
+      ]
+    },
+    "nextAiringEpisode": null
+  },
+  {
+    "id": 21,
+    "title": {
+      "romaji": "ONE PIECE",
+      "english": "ONE PIECE",
+      "native": "ONE PIECE"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx21-ELSYx3yMPcKM.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx21-ELSYx3yMPcKM.jpg",
+      "color": "#e49335"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/21-wf37VakJmZqs.jpg",
+    "description": "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King.<br><br>\nEnter Monkey D. Luffy, a 17-year-old boy that defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate who ransacks villages for fun, Luffy\u2019s reason for being a pirate is one of pure wonder; the thought of an exciting adventure and meeting new and intriguing people, along with finding One Piece, are his reasons of becoming a pirate. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach One Piece.<br><br>\n<b>*This includes following special episodes:<\/b><br>\n- Chopperman to the Rescue! Protect the TV Station by the Shore! (Episode 336)<br>\n- The Strongest Tag-Team! Luffy and Toriko's Hard Struggle! (Episode 492)<br>\n- Team Formation! Save Chopper (Episode 542)<br>\n- History's Strongest Collaboration vs. Glutton of the Sea (Episode 590)<br>\n- 20th Anniversary! Special Romance Dawn (Episode 907)",
+    "episodes": null,
+    "genres": ["Action", "Adventure", "Comedy", "Drama", "Fantasy"],
+    "averageScore": 88,
+    "meanScore": 88,
+    "status": "RELEASING",
+    "season": "FALL",
+    "seasonYear": 1999,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 18,
+          "name": "Toei Animation"
+        },
+        {
+          "id": 102,
+          "name": "Funimation"
+        },
+        {
+          "id": 169,
+          "name": "Fuji TV"
+        },
+        {
+          "id": 2524,
+          "name": "4Kids Entertainment"
+        },
+        {
+          "id": 416,
+          "name": "TAP"
+        },
+        {
+          "id": 142,
+          "name": "Asatsu DK"
+        },
+        {
+          "id": 207,
+          "name": "Magic Bus"
+        },
+        {
+          "id": 68,
+          "name": "Mushi Production"
+        },
+        {
+          "id": 6291,
+          "name": "Studio Guts"
+        },
+        {
+          "id": 406,
+          "name": "Asahi Production"
+        },
+        {
+          "id": 6429,
+          "name": "Avex Pictures"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748182560,
+      "timeUntilAiring": 340402,
+      "episode": 1130
+    }
+  },
+  {
+    "id": 174802,
+    "title": {
+      "romaji": "Shiunji-ke no Kodomotachi",
+      "english": "The Shiunji Family Children",
+      "native": "\u7d2b\u96f2\u5bfa\u5bb6\u306e\u5b50\u4f9b\u305f\u3061"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx174802-ILahIZlNWN3R.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx174802-ILahIZlNWN3R.jpg",
+      "color": "#e4935d"
+    },
+    "bannerImage": null,
+    "description": "The Shiunji family with their seven children reside in a mansion within Tokyo\u2019s Setagaya ward. The eldest son, Arata, is tired of being pushed around by his five sisters and daydreams of a life without them. That is, until Arata\u2019s father reveals a shocking truth\u2014Arata isn\u2019t biologically related to his sisters! The siblings\u2019 relationships will be tested as they navigate life in this new light.<br><br>\n\n(Source: Crunchyroll)",
+    "episodes": 12,
+    "genres": ["Comedy", "Romance"],
+    "averageScore": 66,
+    "meanScore": 67,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 95,
+          "name": "Doga Kobo"
+        },
+        {
+          "id": 6698,
+          "name": "KADOKAWA"
+        },
+        {
+          "id": 148,
+          "name": "Hakusensha"
+        },
+        {
+          "id": 238,
+          "name": "AT-X"
+        },
+        {
+          "id": 6868,
+          "name": "Kansai TV"
+        },
+        {
+          "id": 95,
+          "name": "Doga Kobo"
+        },
+        {
+          "id": 6616,
+          "name": "BS11"
+        },
+        {
+          "id": 7138,
+          "name": "Bandai Namco Music Live"
+        },
+        {
+          "id": 6259,
+          "name": "TOKYO MX"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748352600,
+      "timeUntilAiring": 510442,
+      "episode": 8
+    }
+  },
+  {
+    "id": 185736,
+    "title": {
+      "romaji": "Vigilante: Boku no Hero Academia ILLEGALS",
+      "english": "My Hero Academia: Vigilantes",
+      "native": "\u30f4\u30a3\u30b8\u30e9\u30f3\u30c6 -\u50d5\u306e\u30d2\u30fc\u30ed\u30fc\u30a2\u30ab\u30c7\u30df\u30a2 ILLEGALS-"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx185736-Ci6AiGwjKKtp.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx185736-Ci6AiGwjKKtp.jpg",
+      "color": "#50d6e4"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/185736-Ick7OABzBWoi.jpg",
+    "description": "Kouichi Haimawari is a dull college student who aspires to be a hero but has given up on his dream. Although 80% of the world\u2019s population has superhuman powers called Quirks, few are chosen to become heroes and protect people. Everything changes for Kouichi when he and Pop\u2606Step are saved by the vigilante Knuckleduster and get recruited to become vigilantes themselves!\n<br><br>\n(Source: Crunchyroll) ",
+    "episodes": 13,
+    "genres": ["Action", "Adventure", "Drama", "Fantasy"],
+    "averageScore": 74,
+    "meanScore": 75,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 7585,
+          "name": "bones film"
+        },
+        {
+          "id": 245,
+          "name": "Toho"
+        },
+        {
+          "id": 76,
+          "name": "Yomiuri TV"
+        },
+        {
+          "id": 4,
+          "name": "bones"
+        },
+        {
+          "id": 6570,
+          "name": "Shueisha"
+        },
+        {
+          "id": 53,
+          "name": "Dentsu"
+        },
+        {
+          "id": 757,
+          "name": "Sony Music Entertainment"
+        },
+        {
+          "id": 166,
+          "name": "Movic"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748268000,
+      "timeUntilAiring": 425842,
+      "episode": 8
+    }
+  },
+  {
+    "id": 167336,
+    "title": {
+      "romaji": "Lazarus",
+      "english": "LAZARUS",
+      "native": "\u30e9\u30b6\u30ed"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx167336-KpGIIBie71OX.png",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx167336-KpGIIBie71OX.png",
+      "color": "#e4ae5d"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/167336-IzjrGm2QpTie.jpg",
+    "description": "The year is 2052 \u2014 an era of unprecedented peace and prosperity prevails across the globe. The reason for this: mankind has been freed from sickness and pain. Nobel Prize winning neuroscientist Dr. Skinner has developed a miracle cure-all drug with no apparent drawbacks called Hapuna. Hapuna soon becomes ubiquitous\u2026 and essential. However, soon after Hapuna is officially introduced, Dr. Skinner vanishes.\n<br><br>\nThree years later, the world has moved on. But Dr. Skinner has returned \u2014 this time, as a harbinger of doom. Skinner announces that Hapuna has a short half-life. Everyone who has taken it will die approximately three years later. Death is coming for this sinful world \u2014 and coming soon.\n<br><br>\nAs a response to this threat, a special task force of 5 agents is gathered from across the world to save humanity from Skinner\u2019s plan. This group is called \u201cLazarus.\u201d Can they find Skinner and develop a vaccine before time runs out?\n<br><br>\n<i>(Source: Adult Swim)<\/i>",
+    "episodes": 13,
+    "genres": ["Action", "Sci-Fi"],
+    "averageScore": 71,
+    "meanScore": 72,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6497,
+          "name": "Adult Swim"
+        },
+        {
+          "id": 569,
+          "name": "MAPPA"
+        },
+        {
+          "id": 7439,
+          "name": "Sola Entertainment"
+        },
+        {
+          "id": 17,
+          "name": "Aniplex"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748145600,
+      "timeUntilAiring": 303442,
+      "episode": 8
+    }
+  },
+  {
+    "id": 185213,
+    "title": {
+      "romaji": "Kidou Senshi Gundam GQuuuuuuX",
+      "english": "Mobile Suit Gundam GQuuuuuuX",
+      "native": "\u6a5f\u52d5\u6226\u58ebGundam GQuuuuuuX"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx185213-RKQN0qxKlqd6.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx185213-RKQN0qxKlqd6.jpg",
+      "color": "#00ff0d"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/185213-btMTsXAx2y0A.jpg",
+    "description": "Amate Yuzuriha is a high-school student living peacefully in a space colony floating in outer space.<br><br>\nWhen she meets a war refugee named Nyaan, Amate is drawn into the illegal mobile suit dueling sport known as Clan Battle.<br><br>\nUnder the entry name \"Machu,\" she throws herself into fierce battle day after day, piloting the GQuuuuuuX. Then an unidentified Gundam mobile suit pursued by both the space force and the police appears before her, along with its pilot, a boy named Shuji.<br><br>\nNow their world is about to enter a new era.<br><br>\n(Source: Official Site)<br><br>\n<i>Note: Prior to broadcasting, \"Mobile Suit Gundam GQuuuuuuX -Beginning-\" \u2014 a theatrical pre-screening of the first 3 and 8th episodes edited together\u2014 debuted in Japan on January 17, 2025 and in North America on February 28, 2025.<\/i>",
+    "episodes": null,
+    "genres": ["Drama", "Mecha", "Sci-Fi"],
+    "averageScore": 74,
+    "meanScore": 75,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 47,
+          "name": "Studio Khara"
+        },
+        {
+          "id": 14,
+          "name": "Sunrise"
+        },
+        {
+          "id": 7137,
+          "name": "Bandai Namco Filmworks"
+        },
+        {
+          "id": 6620,
+          "name": "Nippon Television Network"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748359740,
+      "timeUntilAiring": 517582,
+      "episode": 8
+    }
+  },
+  {
+    "id": 180367,
+    "title": {
+      "romaji": "Witch Watch",
+      "english": "WITCH WATCH",
+      "native": "\u30a6\u30a3\u30c3\u30c1\u30a6\u30a9\u30c3\u30c1"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx180367-GlRuB2lG7Kaa.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx180367-GlRuB2lG7Kaa.jpg",
+      "color": "#e4e4ae"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/180367-Kpxveeh3Q3cm.jpg",
+    "description": "Morihito Otogi, a high school student who comes from a lineage of ogres, enjoys a peaceful, ordinary life until his childhood friend, Nico, moves in with him. Nico is a witch-in-training, and chooses Morihito to be her familiar. While Nico is thrilled to reunite with her old friend and crush, Morihito is tasked with the perilous duty to protect her from a foretold calamity. Between the unpredictable chaos caused by Nico\u2019s magic, and the awkwardness of sharing a home, their lives become a whirlwind of supernatural hijinks and threats.\n<br><br>\n(Source: Crunchyroll) <br><br>\n\n<i>Notes: <br>\n- Worldwide premiere of Episodes 1-3 titled as <b>WITCH WATCH: WATCH PARTY<\/b> before the Japanese premiere was pre-screened in advance in theaters on March 16, 2025 in North America by GKIDS Films and March 22 and 23 in Europe by Animation Digital Network. <br>\n- Episodes 1-2 + a selection of stories (Cat Scout, Kanshi's Part Time Job Diaries ~ The Side Job ~, and Kan & Nico's Channel) was pre-screened in advance in theaters on March 30, 2025 in Japan. The regular TV broadcast began April 6, 2025.<\/i>",
+    "episodes": 26,
+    "genres": ["Comedy", "Drama", "Fantasy", "Romance", "Slice of Life"],
+    "averageScore": 73,
+    "meanScore": 73,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6180,
+          "name": "Bibury Animation Studios"
+        },
+        {
+          "id": 143,
+          "name": "Mainichi Broadcasting System"
+        },
+        {
+          "id": 6417,
+          "name": "AQUA ARIS"
+        },
+        {
+          "id": 6432,
+          "name": "JR Higashi Nihon Kikaku"
+        },
+        {
+          "id": 6570,
+          "name": "Shueisha"
+        },
+        {
+          "id": 166,
+          "name": "Movic"
+        },
+        {
+          "id": 62,
+          "name": "Shogakukan-Shueisha Productions"
+        },
+        {
+          "id": 109,
+          "name": "Shouchiku"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748160000,
+      "timeUntilAiring": 317842,
+      "episode": 8
+    }
+  },
+  {
+    "id": 179965,
+    "title": {
+      "romaji": "Haite Kudasai, Takamine-san",
+      "english": "Please Put Them On, Takamine-san",
+      "native": "\u5c65\u3044\u3066\u304f\u3060\u3055\u3044\u3001\u9df9\u5cf0\u3055\u3093"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx179965-EwqzG3xSyxwc.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx179965-EwqzG3xSyxwc.jpg",
+      "color": null
+    },
+    "bannerImage": null,
+    "description": "Takane Takamine is the goddess of her high school. With perfect grades, athletic prowess, and unrivaled beauty, this student council president is the apple of everyone's eye-including Koushi Shirota, a below-average student with no friends or social prospects whatsoever. But he'll soon find out the secret behind Takamine's unbelievable success-her underwear! When she strips, she can undo any of her past actions, and now that Koushi knows, Takamine won't let him off so easy...<br><br>\n\n(Source: Yen Press)",
+    "episodes": 12,
+    "genres": ["Comedy", "Ecchi", "Romance", "Slice of Life"],
+    "averageScore": 56,
+    "meanScore": 57,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6698,
+          "name": "KADOKAWA"
+        },
+        {
+          "id": 839,
+          "name": "LIDENFILMS"
+        },
+        {
+          "id": 58,
+          "name": "Square Enix"
+        },
+        {
+          "id": 6679,
+          "name": "Docomo Anime Store"
+        },
+        {
+          "id": 238,
+          "name": "AT-X"
+        },
+        {
+          "id": 7138,
+          "name": "Bandai Namco Music Live"
+        },
+        {
+          "id": 7506,
+          "name": "DAXEL"
+        },
+        {
+          "id": 7251,
+          "name": "Pia"
+        },
+        {
+          "id": 6259,
+          "name": "TOKYO MX"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748439000,
+      "timeUntilAiring": 596842,
+      "episode": 9
+    }
+  },
+  {
+    "id": 178701,
+    "title": {
+      "romaji": "Aru Majo ga Shinu Made",
+      "english": "Once Upon a Witch's Death",
+      "native": "\u3042\u308b\u9b54\u5973\u304c\u6b7b\u306c\u307e\u3067"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx178701-OA537qbje5AU.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx178701-OA537qbje5AU.jpg",
+      "color": "#f1d6bb"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/178701-va8XkChh60u9.jpg",
+    "description": "On Meg\u2019s seventeenth birthday, she learns that she only has one year left to live. Her mentor\u2014the Eternal Witch, Faust\u2014explains that she is cursed and the only way to save herself is to grow a seed of life using one thousand tears of joy. Of course, such tears aren\u2019t easy to come by. As Meg begins her quest, she finds herself drawn into the lives of her friends and neighbors in ways she never imagined. By sharing their burdens and using her magic to comfort them, she learns how precious those moments of connection can be even in the face of death.<br>\n<br>\n(Source: Yen Press) ",
+    "episodes": 12,
+    "genres": ["Adventure", "Drama", "Fantasy"],
+    "averageScore": 67,
+    "meanScore": 68,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6698,
+          "name": "KADOKAWA"
+        },
+        {
+          "id": 6125,
+          "name": "EMT Squared"
+        },
+        {
+          "id": 464,
+          "name": "flying DOG"
+        },
+        {
+          "id": 238,
+          "name": "AT-X"
+        },
+        {
+          "id": 6125,
+          "name": "EMT Squared"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748356200,
+      "timeUntilAiring": 514042,
+      "episode": 9
+    }
+  },
+  {
+    "id": 180675,
+    "title": {
+      "romaji": "Apocalypse Hotel",
+      "english": "Apocalypse Hotel",
+      "native": "\u30a2\u30dd\u30ab\u30ea\u30d7\u30b9\u30db\u30c6\u30eb"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx180675-YEwsxiMsnyvL.png",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx180675-YEwsxiMsnyvL.png",
+      "color": "#e4c95d"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/180675-aZ7hQkNjewa7.jpg",
+    "description": "Following the collapse of civilization, one storied hotel stands among the ruins of Tokyo\u2019s Ginza district. Overrun by nature, this lone hotel continues to defy humanity\u2019s collapse. Current guests: zero. Check-ins scheduled today: zero. Yesterday\u2019s website traffic: zero. Enter with caution in this story of survival and mystery in a world where the memory of humanity begins to fade.<br><br>\n(Source: Crunchyroll)",
+    "episodes": 12,
+    "genres": ["Comedy", "Sci-Fi", "Slice of Life"],
+    "averageScore": 74,
+    "meanScore": 75,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6182,
+          "name": "CygamesPictures"
+        },
+        {
+          "id": 7232,
+          "name": "CyberAgent"
+        },
+        {
+          "id": 6620,
+          "name": "Nippon Television Network"
+        },
+        {
+          "id": 7238,
+          "name": "Takeshobo"
+        },
+        {
+          "id": 6424,
+          "name": "Sammy"
+        },
+        {
+          "id": 7161,
+          "name": "arma bianca"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748363640,
+      "timeUntilAiring": 521482,
+      "episode": 8
+    }
+  },
+  {
+    "id": 156092,
+    "title": {
+      "romaji": "Tu Bian Yingxiong X",
+      "english": "To Be Hero X",
+      "native": "\u51f8\u53d8\u82f1\u96c4X"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx156092-yHqgQZOF2mbg.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx156092-yHqgQZOF2mbg.jpg",
+      "color": "#d61a1a"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/156092-XJ6CHMZpJ7YX.jpg",
+    "description": "This is a world where heroes are created by people's trust, and the hero who gains the most trust is known as X. In this world, people's trust can be quantified through data, and these values are reflected on everyone's wrist. As long as one gains enough trust points, an ordinary person can possess superpowers and become a superhero who saves the world. However, the constantly changing trust values make the path of a hero full of uncertainties...\n<br><br>\n(Source: Official To Be Hero X home page)",
+    "episodes": 24,
+    "genres": ["Action", "Supernatural"],
+    "averageScore": 83,
+    "meanScore": 83,
+    "status": "RELEASING",
+    "season": null,
+    "seasonYear": null,
+    "format": "ONA",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6655,
+          "name": "BeDream"
+        },
+        {
+          "id": 6389,
+          "name": "bilibili"
+        },
+        {
+          "id": 17,
+          "name": "Aniplex"
+        },
+        {
+          "id": 6323,
+          "name": "Paper Plane Animation Studio"
+        },
+        {
+          "id": 7324,
+          "name": "B.Cool Studio"
+        },
+        {
+          "id": 6391,
+          "name": "Studio LAN"
+        },
+        {
+          "id": 6318,
+          "name": "Pb Animation"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748133000,
+      "timeUntilAiring": 290842,
+      "episode": 8
+    }
+  },
+  {
+    "id": 176301,
+    "title": {
+      "romaji": "Kusuriya no Hitorigoto 2nd Season",
+      "english": "The Apothecary Diaries Season 2",
+      "native": "\u85ac\u5c4b\u306e\u3072\u3068\u308a\u3054\u3068 \u7b2c2\u671f"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx176301-TIGmldLffQGX.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx176301-TIGmldLffQGX.jpg",
+      "color": "#e4bb50"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/176301-GkuTF1YTT6b2.jpg",
+    "description": "The second season of <i>Kusuriya no Hitorigoto<\/i>.<br><br>\n\nMaomao and Jinshi face palace intrigue as a pregnant concubine's safety and a looming conspiracy collide.<br><br>\n\n(Source: Crunchyroll News)",
+    "episodes": 24,
+    "genres": ["Drama", "Mystery"],
+    "averageScore": 87,
+    "meanScore": 87,
+    "status": "RELEASING",
+    "season": "WINTER",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 245,
+          "name": "Toho"
+        },
+        {
+          "id": 7368,
+          "name": "TOHO animation STUDIO"
+        },
+        {
+          "id": 28,
+          "name": "OLM"
+        },
+        {
+          "id": 6620,
+          "name": "Nippon Television Network"
+        },
+        {
+          "id": 7472,
+          "name": "Imagica Infos"
+        },
+        {
+          "id": 28,
+          "name": "OLM"
+        },
+        {
+          "id": 53,
+          "name": "Dentsu"
+        },
+        {
+          "id": 6161,
+          "name": "Shogakukan"
+        },
+        {
+          "id": 58,
+          "name": "Square Enix"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748008800,
+      "timeUntilAiring": 166642,
+      "episode": 19
+    }
+  },
+  {
+    "id": 149118,
+    "title": {
+      "romaji": "Enen no Shouboutai: San no Shou",
+      "english": "Fire Force Season 3",
+      "native": "\u708e\u708e\u30ce\u6d88\u9632\u968a \u53c2\u30ce\u7ae0"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx149118-AOQb0xuTssGl.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx149118-AOQb0xuTssGl.jpg",
+      "color": "#ffa135"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/149118-neeUO11QUL0R.jpg",
+    "description": "The third season of <i>Enen no Shouboutai<\/i>.<br><br>\nShinra and the team are about to uncover the world\u2019s greatest secret. But just as the other Special Fire Force Companies unite to face the looming disaster, Obi is captured by the Tokyo Imperial Army, and Company 8 is branded as traitors. Hunted by the Empire, they must fight alone to rescue Obi and stop the Evangelist\u2014all while a new assassin and the corrupt Captain Burns block their path.<br><br>\n(Source: Crunchyroll)",
+    "episodes": 12,
+    "genres": ["Action", "Drama", "Sci-Fi", "Supernatural"],
+    "averageScore": 78,
+    "meanScore": 79,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 287,
+          "name": "David Production"
+        },
+        {
+          "id": 6815,
+          "name": "DMM.com"
+        },
+        {
+          "id": 159,
+          "name": "Kodansha"
+        },
+        {
+          "id": 143,
+          "name": "Mainichi Broadcasting System"
+        },
+        {
+          "id": 6571,
+          "name": "ADK Marketing Solutions"
+        },
+        {
+          "id": 6421,
+          "name": "Crunchyroll"
+        },
+        {
+          "id": 7354,
+          "name": "SANKYO"
+        },
+        {
+          "id": 287,
+          "name": "David Production"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748019180,
+      "timeUntilAiring": 177022,
+      "episode": 8
+    }
+  },
+  {
+    "id": 184279,
+    "title": {
+      "romaji": "Ballpark de Tsukamaete!",
+      "english": "Catch Me at the Ballpark!",
+      "native": "\u30dc\u30fc\u30eb\u30d1\u30fc\u30af\u3067\u3064\u304b\u307e\u3048\u3066\uff01"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx184279-dw02k4DPxwGz.png",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx184279-dw02k4DPxwGz.png",
+      "color": "#5de4f1"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/184279-MiADtn9N8rI3.jpg",
+    "description": "To escape his tiring job, weary Murata finds escape at a nearby baseball stadium. While the games are thrilling, it\u2019s Ruriko, the gyaru as cold as the beer she serves but secretly a sweetheart, who keeps him coming back. As her first regular, Murata discovers the warmth behind her frosty demeanor, and their hilarious, heartwarming encounters light up the ballpark and maybe even their hearts.\n<br><br>\n(Source: Crunchyroll)",
+    "episodes": 12,
+    "genres": ["Comedy", "Romance", "Slice of Life", "Sports"],
+    "averageScore": 65,
+    "meanScore": 66,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6125,
+          "name": "EMT Squared"
+        },
+        {
+          "id": 7232,
+          "name": "CyberAgent"
+        },
+        {
+          "id": 16,
+          "name": "TV Tokyo"
+        },
+        {
+          "id": 238,
+          "name": "AT-X"
+        },
+        {
+          "id": 159,
+          "name": "Kodansha"
+        },
+        {
+          "id": 7312,
+          "name": "BS Nittele"
+        },
+        {
+          "id": 969,
+          "name": "Ray"
+        },
+        {
+          "id": 6125,
+          "name": "EMT Squared"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748358000,
+      "timeUntilAiring": 515842,
+      "episode": 9
+    }
+  },
+  {
+    "id": 143598,
+    "title": {
+      "romaji": "Kijin Gentoushou",
+      "english": "Sword of the Demon Hunter: Kijin Gentosho",
+      "native": "\u9b3c\u4eba\u5e7b\u71c8\u6284"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx143598-FCvAhQJLllSP.png",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx143598-FCvAhQJLllSP.png",
+      "color": "#e4865d"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/143598-WWxsc0g9pVB2.jpg",
+    "description": "In the Edo period, there was a shrine maiden called \"Itsukihime\" in the mountain village of Kadono. Jinta, a young man who acts as the shrine maiden's guardian despite being a stranger, encounters a mysterious demon who speaks of the far future in the forest where he went to defeat it. From Edo to the Heisei era, this huge Japanese fantasy series follows a demon man who travels through time while continuously questioning the meaning of wielding a sword.<br>\n<br>\n(Source: Crunchyroll News, edited)<br><br>\n<i>\nNotes:<br>\n\u2022 The first episode has a runtime of ~1 hour. <\/i>",
+    "episodes": null,
+    "genres": ["Action", "Adventure", "Fantasy"],
+    "averageScore": 71,
+    "meanScore": 72,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6159,
+          "name": "Yokohama Animation Lab"
+        },
+        {
+          "id": 143,
+          "name": "Mainichi Broadcasting System"
+        },
+        {
+          "id": 517,
+          "name": "Asmik Ace"
+        },
+        {
+          "id": 6340,
+          "name": "Futabasha"
+        },
+        {
+          "id": 166,
+          "name": "Movic"
+        },
+        {
+          "id": 7146,
+          "name": "Tamakoshi"
+        },
+        {
+          "id": 7137,
+          "name": "Bandai Namco Filmworks"
+        },
+        {
+          "id": 6259,
+          "name": "TOKYO MX"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748271600,
+      "timeUntilAiring": 429442,
+      "episode": 9
+    }
+  },
+  {
+    "id": 179955,
+    "title": {
+      "romaji": "Katainaka no Ossan, Kensei ni Naru",
+      "english": "From Old Country Bumpkin to Master Swordsman",
+      "native": "\u7247\u7530\u820e\u306e\u304a\u3063\u3055\u3093\u3001\u5263\u8056\u306b\u306a\u308b"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx179955-e4UPTow92B1O.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx179955-e4UPTow92B1O.jpg",
+      "color": "#e4bba1"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/179955-OVBCGK9eui5c.jpg",
+    "description": "Beryl Gardinant, a self-proclaimed \u201chumble old man,\u201d is a sword instructor at his dojo in a rural, backwater village. In his younger years, he dreamed of glory as a master swordsman, but those days are long behind him. Out of the blue, he receives a visit from a famous former pupil who brings him world-shattering news\u2014he's been appointed as special instructor for the knights of the Liberion Order! With his life now turned upside down, Beryl travels to the capital and reunites with some of his former students: elite knights, an ace wizard, and even an adventurer who's attained the highest guild rank possible. But why do they all want his tutelage?! As far as he's concerned, they clearly don't need him anymore.\n<br><br>\nCan Beryl live up to his new position? And will he ever get a moment's peace away from his adoring students?!\n<br><br>\n(Source: J-Novel Club)",
+    "episodes": 12,
+    "genres": ["Action", "Adventure", "Comedy", "Fantasy"],
+    "averageScore": 68,
+    "meanScore": 68,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 31,
+          "name": "NBCUniversal Entertainment Japan"
+        },
+        {
+          "id": 7066,
+          "name": "Hayabusa Film"
+        },
+        {
+          "id": 911,
+          "name": "Passione"
+        },
+        {
+          "id": 55,
+          "name": "TV Asahi"
+        },
+        {
+          "id": 6796,
+          "name": "BS Asahi"
+        },
+        {
+          "id": 6432,
+          "name": "JR Higashi Nihon Kikaku"
+        },
+        {
+          "id": 7641,
+          "name": "Drecom"
+        },
+        {
+          "id": 460,
+          "name": "KLOCKWORX"
+        },
+        {
+          "id": 323,
+          "name": "Nippon Columbia"
+        },
+        {
+          "id": 7642,
+          "name": "Fujishouji"
+        },
+        {
+          "id": 58,
+          "name": "Square Enix"
+        },
+        {
+          "id": 513,
+          "name": "Nikkatsu"
+        },
+        {
+          "id": 911,
+          "name": "Passione"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748097000,
+      "timeUntilAiring": 254842,
+      "episode": 8
+    }
+  },
+  {
+    "id": 179979,
+    "title": {
+      "romaji": "Aharen-san wa Hakarenai Season 2",
+      "english": "Aharen-san wa Hakarenai Season 2",
+      "native": "\u963f\u6ce2\u9023\u3055\u3093\u306f\u306f\u304b\u308c\u306a\u3044 season2"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx179979-OiIKSkhJRmvo.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx179979-OiIKSkhJRmvo.jpg",
+      "color": "#4386f1"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/179979-1HbnatpG0e4R.jpg",
+    "description": "The second season of <i>Aharen-san wa Hakarenai<\/i>. <br><br>\nThe quiet, awkward Aharen-san and her schoolmate Raidou went from unlikely friends to nearly inseparable. As another semester begins, new opportunities, challenges, and relationships present themselves as Aharen-san and Raidou navigate their school days. Now, Aharen-san struggles to know how vulnerable she can get with a new transfer student.<br><br>\n(Source: Crunchyroll, edited)",
+    "episodes": 12,
+    "genres": ["Comedy", "Romance", "Slice of Life"],
+    "averageScore": 73,
+    "meanScore": 74,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6389,
+          "name": "bilibili"
+        },
+        {
+          "id": 6126,
+          "name": "Felix Film"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748264400,
+      "timeUntilAiring": 422242,
+      "episode": 8
+    }
+  },
+  {
+    "id": 143200,
+    "title": {
+      "romaji": "Summer Pockets",
+      "english": "Summer Pockets",
+      "native": "Summer Pockets"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx143200-42OaDCS6VEy3.png",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx143200-42OaDCS6VEy3.png",
+      "color": "#50bbf1"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/143200-R0qpwS1C6b8i.jpg",
+    "description": "Takahara Hairi never expected summer to feel like a dream. Sent to Torishirojima Island to sort through his late grandmother\u2019s belongings, he\u2019s met with endless sea, quiet nostalgia, and mysterious girls, each chasing something just out of reach. As he settles into island life, lost memories begin to surface and he finds what he never knew he\u2019d lost.<br><br>\n\n(Source: Crunchyroll)",
+    "episodes": null,
+    "genres": ["Drama", "Romance", "Slice of Life", "Supernatural"],
+    "averageScore": 70,
+    "meanScore": 71,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 66,
+          "name": "Key"
+        },
+        {
+          "id": 91,
+          "name": "feel."
+        },
+        {
+          "id": 62,
+          "name": "Shogakukan-Shueisha Productions"
+        },
+        {
+          "id": 203,
+          "name": "Visual Arts"
+        },
+        {
+          "id": 143,
+          "name": "Mainichi Broadcasting System"
+        },
+        {
+          "id": 6432,
+          "name": "JR Higashi Nihon Kikaku"
+        },
+        {
+          "id": 775,
+          "name": "Bushiroad"
+        },
+        {
+          "id": 6612,
+          "name": "FuRyu"
+        },
+        {
+          "id": 6259,
+          "name": "TOKYO MX"
+        },
+        {
+          "id": 6616,
+          "name": "BS11"
+        },
+        {
+          "id": 6605,
+          "name": "Marui Group"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748269800,
+      "timeUntilAiring": 427642,
+      "episode": 8
+    }
+  },
+  {
+    "id": 182814,
+    "title": {
+      "romaji": "Kowloon Generic Romance",
+      "english": "KOWLOON GENERIC ROMANCE",
+      "native": "\u4e5d\u9f8d\u30b8\u30a7\u30cd\u30ea\u30c3\u30af\u30ed\u30de\u30f3\u30b9"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx182814-UTKRUUm7Jah5.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx182814-UTKRUUm7Jah5.jpg",
+      "color": "#6baee4"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/182814-EdVCOqd78Thb.jpg",
+    "description": "Welcome to Kowloon Walled City: a dystopian townscape where the people are brimming with nostalgia, and where the past, present, and future converge. Amid the hidden emotions and extraordinary daily lives of the men and women working in its confines, a tale of romance begins to unfold for real estate agent Reiko Kujirai\u2014one that feels as familiar as Kowloon itself\u2026 \n<br><br>\n(Source: Yen Press) ",
+    "episodes": 13,
+    "genres": ["Drama", "Mystery", "Romance", "Sci-Fi", "Slice of Life"],
+    "averageScore": 73,
+    "meanScore": 73,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 6239,
+          "name": "Arvo Animation"
+        },
+        {
+          "id": 7137,
+          "name": "Bandai Namco Filmworks"
+        },
+        {
+          "id": 16,
+          "name": "TV Tokyo"
+        },
+        {
+          "id": 6570,
+          "name": "Shueisha"
+        },
+        {
+          "id": 7138,
+          "name": "Bandai Namco Music Live"
+        },
+        {
+          "id": 6432,
+          "name": "JR Higashi Nihon Kikaku"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1748095200,
+      "timeUntilAiring": 253042,
+      "episode": 8
+    }
+  },
+  {
+    "id": 178680,
+    "title": {
+      "romaji": "WIND BREAKER Season 2",
+      "english": "WIND BREAKER Season 2",
+      "native": "WIND BREAKER Season 2"
+    },
+    "coverImage": {
+      "large": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/medium\/bx178680-nIAhCizY46ZU.jpg",
+      "medium": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/cover\/small\/bx178680-nIAhCizY46ZU.jpg",
+      "color": "#e4c9ae"
+    },
+    "bannerImage": "https:\/\/s4.anilist.co\/file\/anilistcdn\/media\/anime\/banner\/178680-9HupCDo647QU.jpg",
+    "description": "The second season of <i>WIND BREAKER<\/i>.<br><br>\n\nWelcome back to Furin High School, an institution infamous for its population of brawny brutes who solve every conflict with a show of strength. Some of the students even formed a group, Bofurin, which protects the town. Haruka Sakura, a first-year student who moved in from out of town, is only interested in one thing: fighting his way to the top! <br><br>\n\n(Source: Crunchyroll, edited)",
+    "episodes": 12,
+    "genres": ["Action", "Comedy", "Drama"],
+    "averageScore": 78,
+    "meanScore": 78,
+    "status": "RELEASING",
+    "season": "SPRING",
+    "seasonYear": 2025,
+    "format": "TV",
+    "studios": {
+      "nodes": [
+        {
+          "id": 17,
+          "name": "Aniplex"
+        },
+        {
+          "id": 6222,
+          "name": "CloverWorks"
+        },
+        {
+          "id": 159,
+          "name": "Kodansha"
+        },
+        {
+          "id": 7308,
+          "name": "Aiming"
+        },
+        {
+          "id": 143,
+          "name": "Mainichi Broadcasting System"
+        },
+        {
+          "id": 6709,
+          "name": "Tohan"
+        },
+        {
+          "id": 6222,
+          "name": "CloverWorks"
+        }
+      ]
+    },
+    "nextAiringEpisode": {
+      "airingAt": 1747927560,
+      "timeUntilAiring": 85402,
+      "episode": 8
+    }
+  }
+]
