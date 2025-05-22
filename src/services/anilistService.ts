@@ -3,7 +3,7 @@ import client from '@/gql/client';
 import { AnimeListQueryVariables } from '@/gql/graphql';
 
 export const PageInfoFragment = graphql(`
-  fragment Pagination on PageInfo {
+  fragment PageInfoFragment on PageInfo {
     total
     currentPage
     lastPage
@@ -44,10 +44,20 @@ export const AnimeListQuery = graphql(`
   ) {
     Page(page: $page, perPage: $perPage) {
       pageInfo {
-        ...Pagination
+        ...PageInfoFragment
       }
       media(sort: $sort, type: ANIME, isAdult: false, genre: $genre, genre_in: $genres) {
         id
+        title {
+          userPreferred
+          english
+          romaji
+        }
+        coverImage {
+          large
+          medium
+          color
+        }
         ...CardMedia
       }
     }
@@ -56,4 +66,11 @@ export const AnimeListQuery = graphql(`
 
 export function getAnimeList(payload: AnimeListQueryVariables) {
   return client.request(AnimeListQuery, payload);
+}
+
+export function getAnimeListOptions(payload: AnimeListQueryVariables) {
+  return {
+    queryKey: ['animeList', payload.page, payload.perPage, payload.sort, payload.genre],
+    queryFn: () => getAnimeList(payload),
+  };
 }

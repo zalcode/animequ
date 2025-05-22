@@ -4545,14 +4545,14 @@ export type YearStats = {
   year?: Maybe<Scalars['Int']['output']>;
 };
 
-export type PaginationFragment = {
+export type PageInfoFragmentFragment = {
   __typename?: 'PageInfo';
   total?: number | null;
   currentPage?: number | null;
   lastPage?: number | null;
   hasNextPage?: boolean | null;
   perPage?: number | null;
-} & { ' $fragmentName'?: 'PaginationFragment' };
+} & { ' $fragmentName'?: 'PageInfoFragmentFragment' };
 
 export type CardMediaFragment = {
   __typename?: 'Media';
@@ -4593,24 +4593,37 @@ export type AnimeListQuery = {
     __typename?: 'Page';
     pageInfo?:
       | ({ __typename?: 'PageInfo' } & {
-          ' $fragmentRefs'?: { PaginationFragment: PaginationFragment };
+          ' $fragmentRefs'?: { PageInfoFragmentFragment: PageInfoFragmentFragment };
         })
       | null;
     media?: Array<
-      | ({ __typename?: 'Media'; id: number } & {
-          ' $fragmentRefs'?: { CardMediaFragment: CardMediaFragment };
-        })
+      | ({
+          __typename?: 'Media';
+          id: number;
+          title?: {
+            __typename?: 'MediaTitle';
+            userPreferred?: string | null;
+            english?: string | null;
+            romaji?: string | null;
+          } | null;
+          coverImage?: {
+            __typename?: 'MediaCoverImage';
+            large?: string | null;
+            medium?: string | null;
+            color?: string | null;
+          } | null;
+        } & { ' $fragmentRefs'?: { CardMediaFragment: CardMediaFragment } })
       | null
     > | null;
   } | null;
 };
 
-export const PaginationFragmentDoc = {
+export const PageInfoFragmentFragmentDoc = {
   kind: 'Document',
   definitions: [
     {
       kind: 'FragmentDefinition',
-      name: { kind: 'Name', value: 'Pagination' },
+      name: { kind: 'Name', value: 'PageInfoFragment' },
       typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
       selectionSet: {
         kind: 'SelectionSet',
@@ -4624,7 +4637,7 @@ export const PaginationFragmentDoc = {
       },
     },
   ],
-} as unknown as DocumentNode<PaginationFragment, unknown>;
+} as unknown as DocumentNode<PageInfoFragmentFragment, unknown>;
 export const CardMediaFragmentDoc = {
   kind: 'Document',
   definitions: [
@@ -4744,7 +4757,7 @@ export const AnimeListDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'Pagination' } },
+                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'PageInfoFragment' } },
                     ],
                   },
                 },
@@ -4782,6 +4795,30 @@ export const AnimeListDocument = {
                     kind: 'SelectionSet',
                     selections: [
                       { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'title' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'english' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
+                          ],
+                        },
+                      },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'coverImage' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+                          ],
+                        },
+                      },
                       { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
                     ],
                   },
@@ -4794,7 +4831,7 @@ export const AnimeListDocument = {
     },
     {
       kind: 'FragmentDefinition',
-      name: { kind: 'Name', value: 'Pagination' },
+      name: { kind: 'Name', value: 'PageInfoFragment' },
       typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
       selectionSet: {
         kind: 'SelectionSet',
