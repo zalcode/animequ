@@ -29,7 +29,7 @@ type Anime = {
   bannerImage?: string | null;
 };
 
-export default function ImageSlider(props: { animes: Anime[] }) {
+export default function AnimeSlider(props: { animes: Anime[] }) {
   return (
     <Swiper
       slidesPerView={1}
