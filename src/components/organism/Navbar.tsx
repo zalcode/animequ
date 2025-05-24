@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Search, User, BookmarkIcon, Home, List } from 'lucide-react';
+import { Search, User, BookmarkIcon, Home } from 'lucide-react';
 import { Button } from '@/components/atom/button';
 import MobileMenu from './MobileMenu';
 
@@ -20,12 +20,6 @@ export default function Navbar() {
               <Link href="/">
                 <Home className="mr-2 h-4 w-4" />
                 Home
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm">
-              <Link href="/anime-list">
-                <List className="mr-2 h-4 w-4" />
-                Anime List
               </Link>
             </Button>
             <Button asChild variant="ghost" size="sm">

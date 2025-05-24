@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -19,10 +19,10 @@ export type Scalars = {
   Int: { input: number; output: number };
   Float: { input: number; output: number };
   /** ISO 3166-1 alpha-2 country code */
-  CountryCode: { input: any; output: any };
+  CountryCode: { input: string; output: string };
   /** 8 digit long date integer (YYYYMMDD). Unknown dates represented by 0. E.g. 2016: 20160000, May 1976: 19760500 */
-  FuzzyDateInt: { input: any; output: any };
-  Json: { input: any; output: any };
+  FuzzyDateInt: { input: string; output: string };
+  Json: { input: string; output: string };
 };
 
 /** Notification for when a activity is liked */
@@ -4545,14 +4545,14 @@ export type YearStats = {
   year?: Maybe<Scalars['Int']['output']>;
 };
 
-export type PageInfoFragmentFragment = {
+export type PageInfoFragment = {
   __typename?: 'PageInfo';
   total?: number | null;
   currentPage?: number | null;
   lastPage?: number | null;
   hasNextPage?: boolean | null;
   perPage?: number | null;
-} & { ' $fragmentName'?: 'PageInfoFragmentFragment' };
+};
 
 export type CardMediaFragment = {
   __typename?: 'Media';
@@ -4575,7 +4575,146 @@ export type CardMediaFragment = {
     medium?: string | null;
     color?: string | null;
   } | null;
-} & { ' $fragmentName'?: 'CardMediaFragment' };
+};
+
+export type TagFragment = {
+  __typename?: 'MediaTag';
+  id: number;
+  name: string;
+  rank?: number | null;
+};
+
+export type AnimeDetailFragment = {
+  __typename?: 'Media';
+  id: number;
+  bannerImage?: string | null;
+  description?: string | null;
+  duration?: number | null;
+  meanScore?: number | null;
+  popularity?: number | null;
+  favourites?: number | null;
+  status?: MediaStatus | null;
+  source?: MediaSource | null;
+  synonyms?: Array<string | null> | null;
+  averageScore?: number | null;
+  genres?: Array<string | null> | null;
+  format?: MediaFormat | null;
+  episodes?: number | null;
+  season?: MediaSeason | null;
+  seasonYear?: number | null;
+  tags?: Array<{
+    __typename?: 'MediaTag';
+    id: number;
+    name: string;
+    rank?: number | null;
+  } | null> | null;
+  studios?: {
+    __typename?: 'StudioConnection';
+    nodes?: Array<{ __typename?: 'Studio'; id: number; name: string } | null> | null;
+  } | null;
+  startDate?: {
+    __typename?: 'FuzzyDate';
+    year?: number | null;
+    month?: number | null;
+    day?: number | null;
+  } | null;
+  endDate?: {
+    __typename?: 'FuzzyDate';
+    year?: number | null;
+    month?: number | null;
+    day?: number | null;
+  } | null;
+  nextAiringEpisode?: {
+    __typename?: 'AiringSchedule';
+    airingAt: number;
+    timeUntilAiring: number;
+    episode: number;
+  } | null;
+  trailer?: {
+    __typename?: 'MediaTrailer';
+    id?: string | null;
+    site?: string | null;
+    thumbnail?: string | null;
+  } | null;
+  characters?: {
+    __typename?: 'CharacterConnection';
+    edges?: Array<{
+      __typename?: 'CharacterEdge';
+      role?: CharacterRole | null;
+      node?: {
+        __typename?: 'Character';
+        id: number;
+        description?: string | null;
+        name?: {
+          __typename?: 'CharacterName';
+          full?: string | null;
+          native?: string | null;
+        } | null;
+        image?: {
+          __typename?: 'CharacterImage';
+          large?: string | null;
+          medium?: string | null;
+        } | null;
+      } | null;
+    } | null> | null;
+  } | null;
+  staff?: {
+    __typename?: 'StaffConnection';
+    edges?: Array<{
+      __typename?: 'StaffEdge';
+      role?: string | null;
+      node?: {
+        __typename?: 'Staff';
+        id: number;
+        description?: string | null;
+        primaryOccupations?: Array<string | null> | null;
+        name?: { __typename?: 'StaffName'; full?: string | null; native?: string | null } | null;
+        image?: { __typename?: 'StaffImage'; large?: string | null; medium?: string | null } | null;
+      } | null;
+    } | null> | null;
+  } | null;
+  recommendations?: {
+    __typename?: 'RecommendationConnection';
+    nodes?: Array<{
+      __typename?: 'Recommendation';
+      rating?: number | null;
+      mediaRecommendation?: {
+        __typename?: 'Media';
+        id: number;
+        averageScore?: number | null;
+        genres?: Array<string | null> | null;
+        format?: MediaFormat | null;
+        episodes?: number | null;
+        season?: MediaSeason | null;
+        seasonYear?: number | null;
+        title?: {
+          __typename?: 'MediaTitle';
+          userPreferred?: string | null;
+          english?: string | null;
+          romaji?: string | null;
+        } | null;
+        coverImage?: {
+          __typename?: 'MediaCoverImage';
+          large?: string | null;
+          medium?: string | null;
+          color?: string | null;
+        } | null;
+      } | null;
+    } | null> | null;
+  } | null;
+  title?: {
+    __typename?: 'MediaTitle';
+    userPreferred?: string | null;
+    english?: string | null;
+    romaji?: string | null;
+  } | null;
+  coverImage?: {
+    __typename?: 'MediaCoverImage';
+    large?: string | null;
+    medium?: string | null;
+    color?: string | null;
+  } | null;
+};
 
 export type AnimeListQueryVariables = Exact<{
   page?: InputMaybe<Scalars['Int']['input']>;
@@ -4585,21 +4724,161 @@ export type AnimeListQueryVariables = Exact<{
     Array<InputMaybe<Scalars['String']['input']>> | InputMaybe<Scalars['String']['input']>
   >;
   sort?: InputMaybe<Array<InputMaybe<MediaSort>> | InputMaybe<MediaSort>>;
+  ids?: InputMaybe<
+    Array<InputMaybe<Scalars['Int']['input']>> | InputMaybe<Scalars['Int']['input']>
+  >;
 }>;
 
 export type AnimeListQuery = {
   __typename?: 'Query';
   Page?: {
     __typename?: 'Page';
-    pageInfo?:
-      | ({ __typename?: 'PageInfo' } & {
-          ' $fragmentRefs'?: { PageInfoFragmentFragment: PageInfoFragmentFragment };
-        })
-      | null;
-    media?: Array<
-      | ({
+    pageInfo?: {
+      __typename?: 'PageInfo';
+      total?: number | null;
+      currentPage?: number | null;
+      lastPage?: number | null;
+      hasNextPage?: boolean | null;
+      perPage?: number | null;
+    } | null;
+    media?: Array<{
+      __typename?: 'Media';
+      id: number;
+      averageScore?: number | null;
+      genres?: Array<string | null> | null;
+      format?: MediaFormat | null;
+      episodes?: number | null;
+      season?: MediaSeason | null;
+      seasonYear?: number | null;
+      title?: {
+        __typename?: 'MediaTitle';
+        userPreferred?: string | null;
+        english?: string | null;
+        romaji?: string | null;
+      } | null;
+      coverImage?: {
+        __typename?: 'MediaCoverImage';
+        large?: string | null;
+        medium?: string | null;
+        color?: string | null;
+      } | null;
+    } | null> | null;
+  } | null;
+};
+
+export type AnimeDetailQueryVariables = Exact<{
+  id?: InputMaybe<Scalars['Int']['input']>;
+}>;
+
+export type AnimeDetailQuery = {
+  __typename?: 'Query';
+  Media?: {
+    __typename?: 'Media';
+    id: number;
+    bannerImage?: string | null;
+    description?: string | null;
+    duration?: number | null;
+    meanScore?: number | null;
+    popularity?: number | null;
+    favourites?: number | null;
+    status?: MediaStatus | null;
+    source?: MediaSource | null;
+    synonyms?: Array<string | null> | null;
+    averageScore?: number | null;
+    genres?: Array<string | null> | null;
+    format?: MediaFormat | null;
+    episodes?: number | null;
+    season?: MediaSeason | null;
+    seasonYear?: number | null;
+    tags?: Array<{
+      __typename?: 'MediaTag';
+      id: number;
+      name: string;
+      rank?: number | null;
+    } | null> | null;
+    studios?: {
+      __typename?: 'StudioConnection';
+      nodes?: Array<{ __typename?: 'Studio'; id: number; name: string } | null> | null;
+    } | null;
+    startDate?: {
+      __typename?: 'FuzzyDate';
+      year?: number | null;
+      month?: number | null;
+      day?: number | null;
+    } | null;
+    endDate?: {
+      __typename?: 'FuzzyDate';
+      year?: number | null;
+      month?: number | null;
+      day?: number | null;
+    } | null;
+    nextAiringEpisode?: {
+      __typename?: 'AiringSchedule';
+      airingAt: number;
+      timeUntilAiring: number;
+      episode: number;
+    } | null;
+    trailer?: {
+      __typename?: 'MediaTrailer';
+      id?: string | null;
+      site?: string | null;
+      thumbnail?: string | null;
+    } | null;
+    characters?: {
+      __typename?: 'CharacterConnection';
+      edges?: Array<{
+        __typename?: 'CharacterEdge';
+        role?: CharacterRole | null;
+        node?: {
+          __typename?: 'Character';
+          id: number;
+          description?: string | null;
+          name?: {
+            __typename?: 'CharacterName';
+            full?: string | null;
+            native?: string | null;
+          } | null;
+          image?: {
+            __typename?: 'CharacterImage';
+            large?: string | null;
+            medium?: string | null;
+          } | null;
+        } | null;
+      } | null> | null;
+    } | null;
+    staff?: {
+      __typename?: 'StaffConnection';
+      edges?: Array<{
+        __typename?: 'StaffEdge';
+        role?: string | null;
+        node?: {
+          __typename?: 'Staff';
+          id: number;
+          description?: string | null;
+          primaryOccupations?: Array<string | null> | null;
+          name?: { __typename?: 'StaffName'; full?: string | null; native?: string | null } | null;
+          image?: {
+            __typename?: 'StaffImage';
+            large?: string | null;
+            medium?: string | null;
+          } | null;
+        } | null;
+      } | null> | null;
+    } | null;
+    recommendations?: {
+      __typename?: 'RecommendationConnection';
+      nodes?: Array<{
+        __typename?: 'Recommendation';
+        rating?: number | null;
+        mediaRecommendation?: {
           __typename?: 'Media';
           id: number;
+          averageScore?: number | null;
+          genres?: Array<string | null> | null;
+          format?: MediaFormat | null;
+          episodes?: number | null;
+          season?: MediaSeason | null;
+          seasonYear?: number | null;
           title?: {
             __typename?: 'MediaTitle';
             userPreferred?: string | null;
@@ -4612,18 +4891,30 @@ export type AnimeListQuery = {
             medium?: string | null;
             color?: string | null;
           } | null;
-        } & { ' $fragmentRefs'?: { CardMediaFragment: CardMediaFragment } })
-      | null
-    > | null;
+        } | null;
+      } | null> | null;
+    } | null;
+    title?: {
+      __typename?: 'MediaTitle';
+      userPreferred?: string | null;
+      english?: string | null;
+      romaji?: string | null;
+    } | null;
+    coverImage?: {
+      __typename?: 'MediaCoverImage';
+      large?: string | null;
+      medium?: string | null;
+      color?: string | null;
+    } | null;
   } | null;
 };
 
-export const PageInfoFragmentFragmentDoc = {
+export const PageInfoFragmentDoc = {
   kind: 'Document',
   definitions: [
     {
       kind: 'FragmentDefinition',
-      name: { kind: 'Name', value: 'PageInfoFragment' },
+      name: { kind: 'Name', value: 'PageInfo' },
       typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
       selectionSet: {
         kind: 'SelectionSet',
@@ -4637,7 +4928,7 @@ export const PageInfoFragmentFragmentDoc = {
       },
     },
   ],
-} as unknown as DocumentNode<PageInfoFragmentFragment, unknown>;
+} as unknown as DocumentNode<PageInfoFragment, unknown>;
 export const CardMediaFragmentDoc = {
   kind: 'Document',
   definitions: [
@@ -4684,6 +4975,328 @@ export const CardMediaFragmentDoc = {
     },
   ],
 } as unknown as DocumentNode<CardMediaFragment, unknown>;
+export const TagFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Tag' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'MediaTag' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'rank' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<TagFragment, unknown>;
+export const AnimeDetailFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'AnimeDetail' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'duration' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'tags' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'FragmentSpread', name: { kind: 'Name', value: 'Tag' } }],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'meanScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'popularity' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'favourites' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'status' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'source' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'studios' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'startDate' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'year' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'month' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'day' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'endDate' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'year' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'month' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'day' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'nextAiringEpisode' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'airingAt' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'timeUntilAiring' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'episode' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'synonyms' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'trailer' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'site' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'thumbnail' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'characters' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'sort' },
+                value: { kind: 'EnumValue', value: 'ROLE' },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'edges' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'node' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'name' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'full' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'native' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'image' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'role' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'staff' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'edges' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'node' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'name' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'full' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'native' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'image' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'primaryOccupations' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'role' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'recommendations' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'sort' },
+                value: { kind: 'EnumValue', value: 'RATING_DESC' },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'mediaRecommendation' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'rating' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'CardMedia' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'title' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'english' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'coverImage' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'format' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'season' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Tag' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'MediaTag' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'rank' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AnimeDetailFragment, unknown>;
 export const AnimeListDocument = {
   kind: 'Document',
   definitions: [
@@ -4729,6 +5342,14 @@ export const AnimeListDocument = {
             values: [{ kind: 'EnumValue', value: 'TRENDING_DESC' }],
           },
         },
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'ids' } },
+          type: {
+            kind: 'ListType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+          },
+        },
       ],
       selectionSet: {
         kind: 'SelectionSet',
@@ -4757,7 +5378,7 @@ export const AnimeListDocument = {
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'PageInfoFragment' } },
+                      { kind: 'FragmentSpread', name: { kind: 'Name', value: 'PageInfo' } },
                     ],
                   },
                 },
@@ -4790,35 +5411,16 @@ export const AnimeListDocument = {
                       name: { kind: 'Name', value: 'genre_in' },
                       value: { kind: 'Variable', name: { kind: 'Name', value: 'genres' } },
                     },
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'id_in' },
+                      value: { kind: 'Variable', name: { kind: 'Name', value: 'ids' } },
+                    },
                   ],
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
                       { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'title' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'english' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
-                          ],
-                        },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'coverImage' },
-                        selectionSet: {
-                          kind: 'SelectionSet',
-                          selections: [
-                            { kind: 'Field', name: { kind: 'Name', value: 'large' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
-                            { kind: 'Field', name: { kind: 'Name', value: 'color' } },
-                          ],
-                        },
-                      },
                       { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
                     ],
                   },
@@ -4831,7 +5433,7 @@ export const AnimeListDocument = {
     },
     {
       kind: 'FragmentDefinition',
-      name: { kind: 'Name', value: 'PageInfoFragment' },
+      name: { kind: 'Name', value: 'PageInfo' },
       typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'PageInfo' } },
       selectionSet: {
         kind: 'SelectionSet',
@@ -4887,3 +5489,346 @@ export const AnimeListDocument = {
     },
   ],
 } as unknown as DocumentNode<AnimeListQuery, AnimeListQueryVariables>;
+export const AnimeDetailDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'AnimeDetail' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'Int' } },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'Media' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'id' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'id' } },
+              },
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'type' },
+                value: { kind: 'EnumValue', value: 'ANIME' },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'FragmentSpread', name: { kind: 'Name', value: 'AnimeDetail' } },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'CardMedia' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'title' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'userPreferred' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'english' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'romaji' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'coverImage' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'format' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'season' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Tag' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'MediaTag' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'rank' } },
+        ],
+      },
+    },
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'AnimeDetail' },
+      typeCondition: { kind: 'NamedType', name: { kind: 'Name', value: 'Media' } },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'duration' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'tags' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [{ kind: 'FragmentSpread', name: { kind: 'Name', value: 'Tag' } }],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'meanScore' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'popularity' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'favourites' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'status' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'source' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'studios' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'startDate' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'year' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'month' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'day' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'endDate' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'year' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'month' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'day' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'nextAiringEpisode' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'airingAt' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'timeUntilAiring' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'episode' } },
+              ],
+            },
+          },
+          { kind: 'Field', name: { kind: 'Name', value: 'synonyms' } },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'trailer' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'site' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'thumbnail' } },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'characters' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'sort' },
+                value: { kind: 'EnumValue', value: 'ROLE' },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'edges' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'node' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'name' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'full' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'native' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'image' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'role' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'staff' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'edges' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'node' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'name' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'full' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'native' } },
+                                ],
+                              },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'image' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  { kind: 'Field', name: { kind: 'Name', value: 'large' } },
+                                  { kind: 'Field', name: { kind: 'Name', value: 'medium' } },
+                                ],
+                              },
+                            },
+                            { kind: 'Field', name: { kind: 'Name', value: 'description' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'primaryOccupations' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'role' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'recommendations' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'sort' },
+                value: { kind: 'EnumValue', value: 'RATING_DESC' },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'nodes' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'mediaRecommendation' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'FragmentSpread', name: { kind: 'Name', value: 'CardMedia' } },
+                          ],
+                        },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'rating' } },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AnimeDetailQuery, AnimeDetailQueryVariables>;
