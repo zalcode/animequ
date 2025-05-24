@@ -24,7 +24,9 @@ export default async function Home() {
         {genresData?.length ? (
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">Genres</h2>
-            <GenreList genres={genresData} />
+            <Suspense>
+              <GenreList genres={genresData} />
+            </Suspense>
           </div>
         ) : null}
         {/* Trending Today */}

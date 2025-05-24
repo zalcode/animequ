@@ -11,9 +11,9 @@ import { Maybe } from 'graphql/jsutils/Maybe';
 import AnimeStaff from '@/components/organism/AnimeStaff';
 
 interface AnimePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function AnimePage({ params }: AnimePageProps) {
