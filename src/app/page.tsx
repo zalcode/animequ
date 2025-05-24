@@ -1,15 +1,19 @@
 import AnimeSlider from '@/components/organism/AnimeSlider';
-import animes from './animes.json';
 import { Suspense } from 'react';
 import AnimeList from '@/components/organism/AnimeList';
 import { MediaSort } from '@/gql/graphql';
 import { getQueryClient } from '@/components/providers/getQueryClient';
-import { getAnimeListOptions, getGenreList } from '@/services/anilistService';
+import { getAnimeList, getAnimeListOptions, getGenreList } from '@/services/anilistService';
 import GenreList from '@/components/organism/GenreList';
 
 export default async function Home() {
   const queryClient = getQueryClient();
   const genresData = await getGenreList();
+  const popularAnime = await getAnimeList({
+    page: 1,
+    perPage: 5,
+    sort: [MediaSort.PopularityDesc],
+  });
 
   void queryClient.prefetchQuery(
     getAnimeListOptions({ page: 1, perPage: 20, sort: [MediaSort.TrendingDesc] }),
@@ -18,7 +22,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       <div className="container space-y-8 py-6">
-        <AnimeSlider animes={animes} />
+        {popularAnime.Page?.media && <AnimeSlider animes={popularAnime.Page?.media} />}
 
         {/* Genres */}
         {genresData?.length ? (

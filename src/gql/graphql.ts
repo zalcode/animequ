@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -4556,12 +4557,14 @@ export type PageInfoFragment = {
 export type CardMediaFragment = {
   __typename?: 'Media';
   id: number;
+  bannerImage?: string | null;
   averageScore?: number | null;
   genres?: Array<string | null> | null;
   format?: MediaFormat | null;
   episodes?: number | null;
   season?: MediaSeason | null;
   seasonYear?: number | null;
+  description?: string | null;
   title?: {
     __typename?: 'MediaTitle';
     userPreferred?: string | null;
@@ -4680,12 +4683,14 @@ export type AnimeDetailFragment = {
       mediaRecommendation?: {
         __typename?: 'Media';
         id: number;
+        bannerImage?: string | null;
         averageScore?: number | null;
         genres?: Array<string | null> | null;
         format?: MediaFormat | null;
         episodes?: number | null;
         season?: MediaSeason | null;
         seasonYear?: number | null;
+        description?: string | null;
         title?: {
           __typename?: 'MediaTitle';
           userPreferred?: string | null;
@@ -4743,12 +4748,14 @@ export type AnimeListQuery = {
     media?: Array<{
       __typename?: 'Media';
       id: number;
+      bannerImage?: string | null;
       averageScore?: number | null;
       genres?: Array<string | null> | null;
       format?: MediaFormat | null;
       episodes?: number | null;
       season?: MediaSeason | null;
       seasonYear?: number | null;
+      description?: string | null;
       title?: {
         __typename?: 'MediaTitle';
         userPreferred?: string | null;
@@ -4872,12 +4879,14 @@ export type AnimeDetailQuery = {
         mediaRecommendation?: {
           __typename?: 'Media';
           id: number;
+          bannerImage?: string | null;
           averageScore?: number | null;
           genres?: Array<string | null> | null;
           format?: MediaFormat | null;
           episodes?: number | null;
           season?: MediaSeason | null;
           seasonYear?: number | null;
+          description?: string | null;
           title?: {
             __typename?: 'MediaTitle';
             userPreferred?: string | null;
@@ -4970,12 +4979,14 @@ export const CardMediaFragmentDoc = {
               ],
             },
           },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
           { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
           { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
           { kind: 'Field', name: { kind: 'Name', value: 'format' } },
           { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
           { kind: 'Field', name: { kind: 'Name', value: 'season' } },
           { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
         ],
       },
     },
@@ -5279,12 +5290,14 @@ export const AnimeDetailFragmentDoc = {
               ],
             },
           },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
           { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
           { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
           { kind: 'Field', name: { kind: 'Name', value: 'format' } },
           { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
           { kind: 'Field', name: { kind: 'Name', value: 'season' } },
           { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
         ],
       },
     },
@@ -5484,12 +5497,14 @@ export const AnimeListDocument = {
               ],
             },
           },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
           { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
           { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
           { kind: 'Field', name: { kind: 'Name', value: 'format' } },
           { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
           { kind: 'Field', name: { kind: 'Name', value: 'season' } },
           { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
         ],
       },
     },
@@ -5569,12 +5584,14 @@ export const AnimeDetailDocument = {
               ],
             },
           },
+          { kind: 'Field', name: { kind: 'Name', value: 'bannerImage' } },
           { kind: 'Field', name: { kind: 'Name', value: 'averageScore' } },
           { kind: 'Field', name: { kind: 'Name', value: 'genres' } },
           { kind: 'Field', name: { kind: 'Name', value: 'format' } },
           { kind: 'Field', name: { kind: 'Name', value: 'episodes' } },
           { kind: 'Field', name: { kind: 'Name', value: 'season' } },
           { kind: 'Field', name: { kind: 'Name', value: 'seasonYear' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'description' } },
         ],
       },
     },

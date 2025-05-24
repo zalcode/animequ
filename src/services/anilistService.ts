@@ -25,12 +25,14 @@ export const CardMediaFragment = graphql(`
       medium
       color
     }
+    bannerImage
     averageScore
     genres
     format
     episodes
     season
     seasonYear
+    description
   }
 `);
 
