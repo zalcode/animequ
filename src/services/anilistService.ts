@@ -166,8 +166,25 @@ export const AnimeDetailQuery = graphql(`
   }
 `);
 
+export const GenreQuery = graphql(`
+  query GenreList {
+    GenreCollection
+  }
+`);
+
 export function getAnimeList(payload: AnimeListQueryVariables) {
   return client.request(AnimeListQuery, payload);
+}
+
+export function getGenreList() {
+  return client.request(GenreQuery).then((data) => {
+    return data.GenreCollection?.reduce((acc: string[], genre) => {
+      if (genre) {
+        acc.push(genre);
+      }
+      return acc;
+    }, [] as string[]);
+  });
 }
 
 export function getAnimeListOptions(payload: AnimeListQueryVariables) {

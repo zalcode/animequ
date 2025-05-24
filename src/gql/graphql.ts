@@ -4909,6 +4909,13 @@ export type AnimeDetailQuery = {
   } | null;
 };
 
+export type GenreListQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GenreListQuery = {
+  __typename?: 'Query';
+  GenreCollection?: Array<string | null> | null;
+};
+
 export const PageInfoFragmentDoc = {
   kind: 'Document',
   definitions: [
@@ -5832,3 +5839,17 @@ export const AnimeDetailDocument = {
     },
   ],
 } as unknown as DocumentNode<AnimeDetailQuery, AnimeDetailQueryVariables>;
+export const GenreListDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'GenreList' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [{ kind: 'Field', name: { kind: 'Name', value: 'GenreCollection' } }],
+      },
+    },
+  ],
+} as unknown as DocumentNode<GenreListQuery, GenreListQueryVariables>;

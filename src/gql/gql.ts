@@ -20,6 +20,7 @@ type Documents = {
   '\n  fragment AnimeDetail on Media {\n    id\n    ...CardMedia\n    bannerImage\n    description\n    duration\n    tags {\n      ...Tag\n    }\n    meanScore\n    popularity\n    favourites\n    status\n    source\n    studios {\n      nodes {\n        id\n        name\n      }\n    }\n    startDate {\n      year\n      month\n      day\n    }\n    endDate {\n      year\n      month\n      day\n    }\n    nextAiringEpisode {\n      airingAt\n      timeUntilAiring\n      episode\n    }\n    synonyms\n    trailer {\n      id\n      site\n      thumbnail\n    }\n    characters(sort: ROLE) {\n      edges {\n        node {\n          id\n          name {\n            full\n            native\n          }\n          image {\n            large\n            medium\n          }\n          description\n        }\n        role\n      }\n    }\n    staff {\n      edges {\n        node {\n          id\n          name {\n            full\n            native\n          }\n          image {\n            large\n            medium\n          }\n          description\n          primaryOccupations\n        }\n        role\n      }\n    }\n    recommendations(sort: RATING_DESC) {\n      nodes {\n        mediaRecommendation {\n          ...CardMedia\n        }\n        rating\n      }\n    }\n  }\n': typeof types.AnimeDetailFragmentDoc;
   '\n  query AnimeList(\n    $page: Int = 1\n    $perPage: Int = 20\n    $genre: String\n    $genres: [String]\n    $sort: [MediaSort] = [TRENDING_DESC]\n    $ids: [Int]\n  ) {\n    Page(page: $page, perPage: $perPage) {\n      pageInfo {\n        ...PageInfo\n      }\n      media(\n        sort: $sort\n        type: ANIME\n        isAdult: false\n        genre: $genre\n        genre_in: $genres\n        id_in: $ids\n      ) {\n        id\n        ...CardMedia\n      }\n    }\n  }\n': typeof types.AnimeListDocument;
   '\n  query AnimeDetail($id: Int) {\n    Media(id: $id, type: ANIME) {\n      ...AnimeDetail\n    }\n  }\n': typeof types.AnimeDetailDocument;
+  '\n  query GenreList {\n    GenreCollection\n  }\n': typeof types.GenreListDocument;
 };
 const documents: Documents = {
   '\n  fragment PageInfo on PageInfo {\n    total\n    currentPage\n    lastPage\n    hasNextPage\n    perPage\n  }\n':
@@ -33,6 +34,7 @@ const documents: Documents = {
     types.AnimeListDocument,
   '\n  query AnimeDetail($id: Int) {\n    Media(id: $id, type: ANIME) {\n      ...AnimeDetail\n    }\n  }\n':
     types.AnimeDetailDocument,
+  '\n  query GenreList {\n    GenreCollection\n  }\n': types.GenreListDocument,
 };
 
 /**
@@ -85,6 +87,12 @@ export function graphql(
 export function graphql(
   source: '\n  query AnimeDetail($id: Int) {\n    Media(id: $id, type: ANIME) {\n      ...AnimeDetail\n    }\n  }\n',
 ): (typeof documents)['\n  query AnimeDetail($id: Int) {\n    Media(id: $id, type: ANIME) {\n      ...AnimeDetail\n    }\n  }\n'];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(
+  source: '\n  query GenreList {\n    GenreCollection\n  }\n',
+): (typeof documents)['\n  query GenreList {\n    GenreCollection\n  }\n'];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};
