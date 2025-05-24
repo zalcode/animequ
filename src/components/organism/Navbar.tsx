@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Search, User, BookmarkIcon, Home } from 'lucide-react';
+import { BookmarkIcon, Home } from 'lucide-react';
 import { Button } from '@/components/atom/button';
 import MobileMenu from './MobileMenu';
 
@@ -29,14 +29,6 @@ export default function Navbar() {
               </Link>
             </Button>
           </nav>
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost" size="icon">
-              <Search className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
-            </Button>
-          </div>
         </div>
         <div className="flex flex-1 justify-end md:hidden">
           <MobileMenu />

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Home, BookmarkIcon, Search, User } from 'lucide-react';
+import { Menu, X, Home, BookmarkIcon } from 'lucide-react';
 import { Button } from '@/components/atom/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/atom/sheet';
 
@@ -47,28 +47,6 @@ export default function MobileMenu() {
               <Link href="/bookmarks">
                 <BookmarkIcon className="mr-2 h-5 w-5" />
                 Bookmarks
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              className="justify-start"
-              onClick={() => setOpen(false)}
-            >
-              <Link href="/search">
-                <Search className="mr-2 h-5 w-5" />
-                Search
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              className="justify-start"
-              onClick={() => setOpen(false)}
-            >
-              <Link href="/profile">
-                <User className="mr-2 h-5 w-5" />
-                Profile
               </Link>
             </Button>
           </div>
