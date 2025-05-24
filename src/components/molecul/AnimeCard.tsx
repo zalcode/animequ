@@ -9,6 +9,7 @@ import { Bookmark, Star } from 'lucide-react';
 import { Button } from '@/components/atom/button';
 import { Card, CardContent, CardFooter } from '@/components/atom/card';
 import { Badge } from '@/components/atom/badge';
+import { addBookmark, isBookmarked } from '@/services/bookmark';
 
 interface AnimeCardProps {
   id: number;
@@ -21,7 +22,6 @@ interface AnimeCardProps {
   season?: string | null;
   seasonYear?: number | null;
   isBookmarked?: boolean;
-  onClickBookmark?: (id: number) => void;
 }
 
 export default function AnimeCard(props: AnimeCardProps) {
@@ -29,26 +29,26 @@ export default function AnimeCard(props: AnimeCardProps) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setBookmarked(props.isBookmarked || false);
+    setBookmarked(isBookmarked(props.id) || false);
     // Add loaded class after a small delay to trigger animation
     const timer = setTimeout(() => {
       setLoaded(true);
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [props.isBookmarked]);
+  }, [props.id, props.isBookmarked]);
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    props.onClickBookmark?.(props.id);
+    addBookmark({ id: props.id });
     setBookmarked((prev) => !prev);
   };
 
   return (
     <Link href={`/anime/${props.id}`}>
       <Card
-        className={`anime-card h-full overflow-hidden gap-0 py-0 transition-all duration-200 hover:scale-[1.02] hover:shadow-lg ${
+        className={`anime-card h-full gap-0 overflow-hidden py-0 transition-all duration-200 hover:scale-[1.02] hover:shadow-lg ${
           loaded ? 'loaded' : ''
         }`}
       >
@@ -64,7 +64,7 @@ export default function AnimeCard(props: AnimeCardProps) {
             <Button
               variant="ghost"
               size="icon"
-              className="h-8 w-8 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70"
+              className="h-8 w-8 cursor-pointer rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70"
               onClick={handleBookmark}
             >
               <Bookmark

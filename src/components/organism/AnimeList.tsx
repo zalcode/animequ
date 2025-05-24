@@ -3,12 +3,7 @@
 import { Button } from '@/components/atom/button';
 import AnimeCard from '@/components/molecul/AnimeCard';
 import AnimeCardSkeleton from '@/components/molecul/AnimeCardSkeleton';
-import { getFragmentData } from '@/gql/fragment-masking';
-import {
-  CardMediaFragment,
-  getAnimeListOptions,
-  PageInfoFragment,
-} from '@/services/anilistService';
+import { getAnimeListOptions } from '@/services/anilistService';
 import { useSuspenseInfiniteQuery } from '@tanstack/react-query';
 
 interface AnimeGridProps {
@@ -21,7 +16,7 @@ export default function AnimeList({ title }: AnimeGridProps) {
       ...getAnimeListOptions({ page: 1, perPage: 20 }),
       initialPageParam: 1,
       getNextPageParam: (lastPage) => {
-        const pageInfo = getFragmentData(PageInfoFragment, lastPage.Page?.pageInfo);
+        const pageInfo = lastPage.Page?.pageInfo;
         return pageInfo?.hasNextPage ? (pageInfo?.currentPage || 1) + 1 : undefined;
       },
     });
@@ -31,9 +26,8 @@ export default function AnimeList({ title }: AnimeGridProps) {
     <div className="space-y-4">
       <h2 className="text-2xl font-bold">{title}</h2>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-        {animeList?.map((data) => {
-          if (!data) return null;
-          const anime = getFragmentData(CardMediaFragment, data);
+        {animeList?.map((anime) => {
+          if (!anime) return null;
           return (
             <AnimeCard
               key={anime.id}
@@ -46,8 +40,6 @@ export default function AnimeList({ title }: AnimeGridProps) {
               season={anime.season}
               seasonYear={anime.seasonYear}
               title={anime.title?.userPreferred || anime.title?.english || anime.title?.romaji}
-              // isBookmarked={anime.isBookmarked}
-              onClickBookmark={() => console.log('Bookmark clicked!')}
             />
           );
         })}
