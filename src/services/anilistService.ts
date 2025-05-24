@@ -2,6 +2,8 @@ import { graphql } from '@/gql';
 import client from '@/gql/client';
 import { AnimeDetailQueryVariables, AnimeListQueryVariables } from '@/gql/graphql';
 
+import { useSuspenseInfiniteQuery } from '@tanstack/react-query';
+
 export const PageInfoFragment = graphql(`
   fragment PageInfo on PageInfo {
     total
@@ -189,18 +191,18 @@ export function getGenreList() {
   });
 }
 
-export function getAnimeListOptions(payload: AnimeListQueryVariables) {
-  return {
-    queryKey: [
-      'animeList',
-      payload.page,
-      payload.perPage,
-      payload.sort,
-      payload.genre,
-      payload.ids,
-    ],
-    queryFn: () => getAnimeList(payload),
-  };
+export function useAnimeList(payload: AnimeListQueryVariables) {
+  return useSuspenseInfiniteQuery({
+    queryKey: ['animeList', payload],
+    initialPageParam: 1,
+    queryFn: (p) => {
+      return getAnimeList({ ...payload, page: p.pageParam || 1 });
+    },
+    getNextPageParam: (lastPage) => {
+      const pageInfo = lastPage.Page?.pageInfo;
+      return pageInfo?.hasNextPage ? (pageInfo?.currentPage || 1) + 1 : undefined;
+    },
+  });
 }
 
 export function getAnimeDetail(payload: AnimeDetailQueryVariables) {

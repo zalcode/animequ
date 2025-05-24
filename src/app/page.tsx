@@ -1,9 +1,9 @@
 import AnimeSlider from '@/components/organism/AnimeSlider';
 import { Suspense } from 'react';
 import AnimeList from '@/components/organism/AnimeList';
-import { MediaSort } from '@/gql/graphql';
+import { AnimeListQueryVariables, MediaSort } from '@/gql/graphql';
 import { getQueryClient } from '@/components/providers/getQueryClient';
-import { getAnimeList, getAnimeListOptions, getGenreList } from '@/services/anilistService';
+import { getAnimeList, getGenreList } from '@/services/anilistService';
 import GenreList from '@/components/organism/GenreList';
 
 export default async function Home() {
@@ -15,9 +15,12 @@ export default async function Home() {
     sort: [MediaSort.PopularityDesc],
   });
 
-  void queryClient.prefetchQuery(
-    getAnimeListOptions({ page: 1, perPage: 20, sort: [MediaSort.TrendingDesc] }),
-  );
+  const payload: AnimeListQueryVariables = { page: 1, perPage: 20, sort: [MediaSort.TrendingDesc] };
+
+  void queryClient.prefetchQuery({
+    queryKey: ['animeList', payload],
+    queryFn: () => getAnimeList(payload),
+  });
 
   return (
     <div className="min-h-screen">

@@ -3,19 +3,14 @@
 import { Button } from '@/components/atom/button';
 import AnimeCard from '@/components/molecul/AnimeCard';
 import AnimeCardSkeleton from '@/components/molecul/AnimeCardSkeleton';
-import { getAnimeListOptions } from '@/services/anilistService';
-import { useSuspenseInfiniteQuery } from '@tanstack/react-query';
+import { useAnimeList } from '@/services/anilistService';
 
 export default function BookmarkList({ bookmarkIds }: { bookmarkIds: number[] }) {
-  const { data, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } =
-    useSuspenseInfiniteQuery({
-      ...getAnimeListOptions({ page: 1, perPage: 20, ids: bookmarkIds }),
-      initialPageParam: 1,
-      getNextPageParam: (lastPage) => {
-        const pageInfo = lastPage.Page?.pageInfo;
-        return pageInfo?.hasNextPage ? (pageInfo?.currentPage || 1) + 1 : undefined;
-      },
-    });
+  const { data, isLoading, isFetchingNextPage, hasNextPage, fetchNextPage } = useAnimeList({
+    page: 1,
+    perPage: 20,
+    ids: bookmarkIds,
+  });
 
   const animeList = data.pages.flatMap((page) => page.Page?.media) || [];
 
